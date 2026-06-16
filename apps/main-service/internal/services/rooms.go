@@ -1,4 +1,4 @@
-package rooms
+package services
 
 import "github.com/IvanGelium/main-service/internal/domain"
 
@@ -6,7 +6,7 @@ type service struct {
 	repo domain.RoomRepository
 }
 
-func NewService(r domain.RoomRepository) domain.RoomService {
+func NewRoomsService(r domain.RoomRepository) domain.RoomService {
 	return &service{repo: r}
 }
 

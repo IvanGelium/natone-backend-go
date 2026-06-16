@@ -1,15 +1,15 @@
-package rooms
+package postgress
 
 import "github.com/IvanGelium/main-service/internal/domain"
 
-type repository struct {
+type roomRepository struct {
 }
 
 func NewRepository() domain.RoomRepository {
-	return &repository{}
+	return &roomRepository{}
 }
 
-func (r *repository) FetchActive() ([]domain.Room, error) {
+func (r *roomRepository) FetchActive() ([]domain.Room, error) {
 	return []domain.Room{
 		{ID: 1, Name: "Комната симуляции огня"},
 		{ID: 2, Name: "Мультиплеерный холст"},
